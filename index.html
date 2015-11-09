@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="testApp" ng-controller="MainCtrl">
+
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <meta content="" name="description">
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta content="width=device-width , initial-scale=1" name="viewport">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet" /> </head>
+
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <form class="form-horizontal" name="bxBillForm">
+                        <div class="form-group">
+                            <input class="form-control" message-id="message-fare" name="fare" ng-model="item.a" number-error-message="请填写正确的数字" placeholder="请输入数值" type="text" validator="required,number">
+                            <span class="validator-info" id="message-fare"></span>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" message-id="message-a" name="a" ng-model="item.b" number-error-message="请填写正确的数字" placeholder="请输入数值" type="text" validator="required,number">
+                            <span class="validator-info" id="message-a"></span>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-group">
+                                <button class="btn btn-success" ng-click="update()" validation-submit="bxBillForm">okay</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="//cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+        <script src="//cdn.bootcss.com/angular.js/1.4.7/angular.js"></script>
+        <script src="angular-validation.js"></script>
+        <script src="app.js"></script>
+        <script src="validate.config.js"></script>
+        <script src="controller.main.js"></script>
+    </body>
+
+</html>
